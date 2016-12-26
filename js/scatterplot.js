@@ -33,8 +33,8 @@
             let random = d3.randomNormal(0, 0.2);
             let sqrt3 = Math.sqrt(3);
             let points0 = d3.range(num1).map(() => [random() + sqrt3, random() + 1]);
-            let points1 = d3.range(num1).map(function() { return [random() - sqrt3, random() + 1]; });
-            let points2 = d3.range(num1).map(function() { return [random(), random() - 1]; });
+            let points1 = d3.range(num1).map(() => [random() - sqrt3, random() + 1]);
+            let points2 = d3.range(num1).map(() => [random(), random() - 1]);
             return [points0, points1, points2];
         }
     }
@@ -42,12 +42,11 @@
 
     let pointsets = plot.randomPointSets(100);
     let points = d3.merge(pointsets);
-    let index = -1;
 
    
     let svg = d3.select("svg");
-    let    width = +svg.attr("width");
-    let    height = +svg.attr("height");
+    let width = +svg.attr("width");
+    let height = +svg.attr("height");
 
     var k = height / width,
         x = d3.scaleLinear().domain([-4.5, 4.5]).range([0, width]),
@@ -70,9 +69,10 @@
         .call(yAxis);
 
     svg.selectAll(".domain")
-        .style("display", "none");
+        .style("display", "1");
 
     svg.call(zoom.transform, d3.zoomIdentity);
+    let index = -1;
 
     d3.interval(function() {
         var pointset = pointsets[index = (index + 1) % (pointsets.length + 1)] || points,
