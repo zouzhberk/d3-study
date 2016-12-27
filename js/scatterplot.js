@@ -3,7 +3,7 @@
 
         constructor() {
             this.context = d3.select("canvas").node().getContext("2d");
-            console.log("berk: ", this.context); 
+            console.log("berk: ", this.context);
         };
 
         zoomed() {
@@ -29,7 +29,7 @@
         };
 
         randomPointSets(num) {
-            let num1 = num ||300
+            let num1 = num || 300
             let random = d3.randomNormal(0, 0.2);
             let sqrt3 = Math.sqrt(3);
             let points0 = d3.range(num1).map(() => [random() + sqrt3, random() + 1]);
@@ -43,7 +43,7 @@
     let pointsets = plot.randomPointSets(100);
     let points = d3.merge(pointsets);
 
-   
+
     let svg = d3.select("svg");
     let width = +svg.attr("width");
     let height = +svg.attr("height");
@@ -91,4 +91,14 @@
                 .scale(k));
     }, 2500);
 
+    // var image = new Image;
+    // image.src = "fallback.svg";
+    // image.onload = function() {
+    //     context.drawImage(image, 0, 0);
+
+    //     var a = document.createElement("a");
+    //     a.download = "fallback.png";
+    //     a.href = canvas.toDataURL("image/png");
+    //     a.click();
+    // };
 })()
