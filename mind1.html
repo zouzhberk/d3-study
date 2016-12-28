@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+.node circle {
+  fill: #999;
+}
+
+.node text {
+  font: 10px sans-serif;
+}
+
+.node--internal circle {
+  fill: #555;
+}
+
+.node--internal text {
+  text-shadow: 0 1px 0 #fff, 0 -1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff;
+}
+
+.link {
+  fill: none;
+  stroke: #555;
+  stroke-opacity: 0.4;
+  stroke-width: 1.5px;
+}
+
+</style>
+<svg width="960" height="1060"></svg>
+<svg width="400" height="600" >
+
+    <path d="M20 20 C90 40 130 40 180 20" stroke="#000000" fill="none" style="stroke-width: 2px;"></path>
+
+</svg>
+
+<script src="vendor/d3.v4.js"></script>
+<script src="vendor/Rx.js" charset="utf-8"></script>
+<script src="vendor/babel.min.js"></script>
+
+<script type="text/babel" src="js/mindmap.js" charset="utf-8"></script>

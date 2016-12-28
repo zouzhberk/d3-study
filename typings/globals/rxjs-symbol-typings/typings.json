@@ -1,0 +1,9 @@
+{
+  "resolution": "main",
+  "tree": {
+    "src": "https://raw.githubusercontent.com/david-driscoll/rxjs-symbol-typings/b06ca4cc670b9e0f2ace68a339dce38648e10e6c/typings.json",
+    "raw": "registry:lib/rxjs-symbol-typings#1.0.0+20160329204237",
+    "main": "rxjs-symbol-shim.d.ts",
+    "name": "rxjs"
+  }
+}

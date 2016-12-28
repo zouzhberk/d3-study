@@ -1,0 +1,12 @@
+{
+  "globalDependencies": {
+    "rx-dom": "registry:dt/rx-dom#2.5.3+20160921164505",
+    "rx-jquery": "registry:dt/rx-jquery#0.0.0+20160510010627",
+    "rx.experimental": "registry:dt/rx.experimental#2.2.28+20160317120654",
+    "rx.testing": "registry:dt/rx.testing#2.2.28+20160317120654",
+    "rxjs-symbol-typings": "registry:lib/rxjs-symbol-typings#1.0.0+20160329204237"
+  },
+  "dependencies": {
+    "lodash": "registry:npm/lodash#4.0.0+20161015015725"
+  }
+}
